@@ -1,47 +1,35 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Button from './components/Button/Button.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div style="padding: 20px" class="Button">
+    <!-- 基础按钮 -->
+    <Button>默认按钮</Button>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <!-- 不同类型按钮 -->
+    <Button type="primary">主要按钮</Button>
+    <Button type="success">成功按钮</Button>
+    <Button type="warning">警告按钮</Button>
+    <Button type="danger">危险按钮</Button>
+    <Button type="info">信息按钮</Button>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <!-- 不同尺寸按钮 -->
+    <Button size="large">大号按钮</Button>
+    <Button size="small">小号按钮</Button>
+
+    <!-- 其他样式按钮 -->
+    <Button plain>朴素按钮</Button>
+    <Button round>圆角按钮</Button>
+    <Button circle></Button>
+
+    <!-- 禁用状态 -->
+    <Button disabled>禁用按钮</Button>
+
+    <!-- 加载状态 -->
+    <Button loading>加载中</Button>
+
+    <!-- 提交类型的按钮 -->
+    <Button :nativeType="'submit'">提交</Button>
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>

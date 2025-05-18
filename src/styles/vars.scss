@@ -1,0 +1,101 @@
+// 变量命名方式参考 Element-Plus 和 BEM 来命名
+
+:root {
+    --mr-color-white: #ffffff;
+    --mr-color-black: #000000;
+    --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+
+    --mr-color-primary: #409eff;
+    --mr-color-primary-light-3: #79bbff;
+    --mr-color-primary-light-5: #a0cfff;
+    --mr-color-primary-light-7: #c6e2ff;
+    --mr-color-primary-light-9: #ecf5ff;
+    --mr-color-primary-light-8: #d9ecff;
+    --mr-color-primary-dark-2: #337ecc;
+
+    --mr-color-success: #67c23a;
+    --mr-color-success-light-3: #95d475;
+    --mr-color-success-light-5: #b3e19d;
+    --mr-color-success-light-7: #d1edc4;
+    --mr-color-success-light-9: #f0f9eb;
+    --mr-color-success-light-8: #e1f3d8;
+    --mr-color-success-dark-2: #529b2e;
+
+    --mr-color-warning: #e6a23c;
+    --mr-color-warning-light-3: #eebe77;
+    --mr-color-warning-light-5: #f3d19e;
+    --mr-color-warning-light-7: #f8e3c5;
+    --mr-color-warning-light-9: #fdf6ec;
+    --mr-color-warning-light-8: #faecd8;
+    --mr-color-warning-dark-2: #b88230;
+
+    --mr-color-danger: #f56c6c;
+    --mr-color-danger-light-3: #f89898;
+    --mr-color-danger-light-5: #fab6b6;
+    --mr-color-danger-light-7: #fcd3d3;
+    --mr-color-danger-light-9: #fef0f0;
+    --mr-color-danger-light-8: #fde2e2;
+    --mr-color-danger-dark-2: #c45656;
+
+    --mr-color-info: #909399;
+    --mr-color-info-light-3: #b1b3b8;
+    --mr-color-info-light-5: #c8c9cc;
+    --mr-color-info-light-7: #dedfe0;
+    --mr-color-info-light-9: #f4f4f5;
+    --mr-color-info-light-8: #e9e9eb;
+    --mr-color-info-dark-2: #73767a;
+
+    --mr-bg-color: #ffffff;
+    --mr-bg-color-page: #f2f3f5;
+    --mr-bg-color-overlay: #ffffff;
+
+    --mr-text-color-primary: #303133;
+    --mr-text-color-regular: #606266;
+    --mr-text-color-secondary: #909399;
+    --mr-text-color-placeholder: #a8abb2;
+    --mr-text-color-disabled: #c0c4cc;
+
+    --mr-fill-color: #f0f2f5;
+    --mr-fill-color-light: #f5f7fa;
+    --mr-fill-color-lighter: #fafafa;
+    --mr-fill-color-extra-light: #fafcff;
+    --mr-fill-color-dark: #ebedf0;
+    --mr-fill-color-darker: #e6e8eb;
+    --mr-fill-color-blank: #ffffff;
+
+    /* border */
+    --mr-border-color: #dcdfe6;
+    --mr-border-color-light: #e4e7ed;
+    --mr-border-color-lighter: #ebeef5;
+    --mr-border-color-extra-light: #f2f6fc;
+    --mr-border-color-dark: #d4d7de;
+    --mr-border-color-darker: #cdd0d6;
+    --mr-border-width: 1px;
+    --mr-border-style: solid;
+    --mr-border-color-hover: var(--mr-text-color-disabled);
+    --mr-border: var(--mr-border-width) var(--mr-border-style) var(--mr-border-color);
+    --mr-border-radius-base: 4px;
+    --mr-border-radius-small: 2px;
+    --mr-border-radius-round: 20px;
+    --mr-border-radius-circle: 100%;
+
+    /*font*/
+    --mr-font-size-extra-large: 20px;
+    --mr-font-size-large: 18px;
+    --mr-font-size-medium: 16px;
+    --mr-font-size-base: 14px;
+    --mr-font-size-small: 13px;
+    --mr-font-size-extra-small: 12px;
+    --mr-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Arial, sans-serif;
+    --mr-font-weight-primary: 500;
+
+    /*disabled*/
+    --mr-disabled-bg-color: var(--mr-fill-color-light);
+    --mr-disabled-text-color: var(--mr-text-color-placeholder);
+    --mr-disabled-border-color: var(--mr-border-color-light);
+
+    /*animation*/
+    --mr-transition-duration: 0.3s;
+    --mr-transition-duration-fast: 0.2s;
+}

@@ -1,0 +1,139 @@
+.mr-button {
+    --mr-button-font-weight: var(--mr-font-weight-primary);
+    --mr-button-border-color: var(--mr-border-color);
+    --mr-button-bg-color: var(--mr-fill-color-blank);
+    --mr-button-text-color: var(--mr-text-color-regular);
+    --mr-button-disabled-text-color: var(--mr-disabled-text-color);
+    --mr-button-disabled-bg-color: var(--mr-fill-color-blank);
+    --mr-button-disabled-border-color: var(--mr-border-color-light);
+    --mr-button-hover-text-color: var(--mr-color-primary);
+    --mr-button-hover-bg-color: var(--mr-color-primary-light-9);
+    --mr-button-hover-border-color: var(--mr-color-primary-light-7);
+    --mr-button-active-text-color: var(--mr-button-hover-text-color);
+    --mr-button-active-border-color: var(--mr-color-primary);
+    --mr-button-active-bg-color: var(--mr-button-hover-bg-color);
+    --mr-button-outline-color: var(--mr-color-primary-light-5);
+    --mr-button-active-color: var(--mr-text-color-primary);
+}
+
+.mr-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    height: 32px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: var(--mr-button-text-color);
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.1s;
+    font-weight: var(--mr-button-font-weight);
+    user-select: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--mr-button-bg-color);
+    border: var(--mr-border);
+    border-color: var(--mr-button-border-color);
+    padding: 8px 15px;
+    font-size: var(--mr-font-size-base);
+    border-radius: var(--mr-border-radius-base);
+
+    // 相邻兄弟选择器，为按钮添加间隔
+    &+& {
+        margin-left: 12px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--mr-button-hover-text-color);
+        border-color: var(--mr-button-hover-border-color);
+        background-color: var(--mr-button-hover-bg-color);
+        outline: none;
+    }
+
+    &:active {
+        color: var(--mr-button-active-text-color);
+        border-color: var(--mr-button-active-border-color);
+        background-color: var(--mr-button-active-bg-color);
+        outline: none;
+    }
+
+    &.is-plain {
+        --mr-button-hover-text-color: var(--mr-color-primary);
+        --mr-button-hover-bg-color: var(--mr-fill-color-blank);
+        --mr-button-hover-border-color: var(--mr-color-primary);
+    }
+
+    &.is-round {
+        border-radius: var(--mr-border-radius-round);
+    }
+
+    &.is-circle {
+        border-radius: 50%;
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus {
+        color: var(--mr-button-disabled-text-color);
+        cursor: not-allowed;
+        background-image: none;
+        background-color: var(--mr-button-disabled-bg-color);
+        border-color: var(--mr-button-disabled-border-color);
+    }
+
+    // 设置图标与按钮文本的间隔
+    [class*="mr-icon"]+span {
+        margin-left: 6px;
+    }
+}
+
+@each $val in primary, success, warning, info, danger {
+    .mr-button--#{$val} {
+        --mr-button-text-color: var(--mr-color-white);
+        --mr-button-bg-color: var(--mr-color-#{$val});
+        --mr-button-border-color: var(--mr-color-#{$val});
+        --mr-button-outline-color: var(--mr-color-#{$val}-light-5);
+        --mr-button-active-color: var(--mr-color-#{$val}-dark-2);
+        --mr-button-hover-text-color: var(--mr-color-white);
+        --mr-button-hover-bg-color: var(--mr-color-#{$val}-light-3);
+        --mr-button-hover-border-color: var(--mr-color-#{$val}-light-3);
+        --mr-button-active-bg-color: var(--mr-color-#{$val}-dark-2);
+        --mr-button-active-border-color: var(--mr-color-#{$val}-dark-2);
+        --mr-button-disabled-text-color: var(--mr-color-white);
+        --mr-button-disabled-bg-color: var(--mr-color-#{$val}-light-5);
+        --mr-button-disabled-border-color: var(--mr-color-#{$val}-light-5);
+
+        &.is-plain {
+            --mr-button-text-color: var(--mr-color-#{$val});
+            --mr-button-bg-color: var(--mr-color-#{$val}-light-9);
+            --mr-button-border-color: var(--mr-color-#{$val}-light-5);
+            --mr-button-hover-text-color: var(--mr-color-white);
+            --mr-button-hover-bg-color: var(--mr-color-#{$val});
+            --mr-button-hover-border-color: var(--mr-color-#{$val});
+            --mr-button-active-text-color: var(--mr-color-white);
+        }
+    }
+}
+
+.mr-button--large {
+    --mr-button-size: 40px;
+    height: var(--mr-button-size);
+    padding: 12px 19px;
+    font-size: var(--mr-font-size-base);
+    border-radius: var(--mr-border-radius-base);
+}
+
+.mr-button--small {
+    --mr-button-size: 24px;
+    height: var(--mr-button-size);
+    padding: 5px 11px;
+    font-size: 12px;
+    border-radius: calc(var(--mr-border-radius-base) - 1px);
+}
