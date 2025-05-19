@@ -1,16 +1,16 @@
 .mr-icon {
-    --mr-icon-color: inherit;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    fill: currentColor;
-    color: var(--mr-icon-color);
-    font-size: inherit;
+  --mr-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--mr-icon-color);
+  font-size: inherit;
 }
 
 @each $val in primary, info, success, warning, danger {
-    .mr-icon--#{$val} {
-        --mr-icon-color: var(--mr-color-#{$val});
-    }
+  .mr-icon--#{$val} {
+    --mr-icon-color: var(--mr-color-#{$val});
+  }
 }

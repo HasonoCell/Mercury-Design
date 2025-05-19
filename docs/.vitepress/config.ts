@@ -20,7 +20,13 @@ export default defineConfig({
         {
           text: 'Components',
           collapsed: true,
-          items: [{ text: 'Button', link: '/components/button' }],
+          items: [
+            { text: 'Button', link: '/components/button' },
+            {
+              text: 'Switch',
+              link: '/components/switch',
+            },
+          ],
         },
       ],
     },

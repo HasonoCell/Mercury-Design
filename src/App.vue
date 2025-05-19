@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import Button from './components/Button/Button.vue'
+import Switch from './components/Switch/Switch.vue'
+
+const test = ref(false)
 </script>
 
 <template>
@@ -29,5 +33,9 @@ import Button from './components/Button/Button.vue'
 
     <!-- 提交类型的按钮 -->
     <Button :nativeType="'submit'">提交</Button>
+  </div>
+
+  <div style="padding: 20px" class="Switch">
+    <Switch v-model="test" activeText="ON" inactiveText="OFF" />
   </div>
 </template>
