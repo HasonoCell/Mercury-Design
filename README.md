@@ -2,17 +2,10 @@
 
 2025 暑期蓝山工作室考核
 
-## Recommended IDE Setup
+## 文档站点
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+本文档站点使用 VitePress 生成并使用 Github Pages 部署。
+通过访问 [Mercury-Design](https://hasonocell.github.io/Mercury-Design/) 来访问文档站点。
 
 ## Project Setup
 
@@ -30,10 +23,4 @@ pnpm dev
 
 ```sh
 pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
 ```
