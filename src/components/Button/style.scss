@@ -42,7 +42,7 @@
   border-radius: var(--mr-border-radius-base);
 
   // 相邻兄弟选择器，为按钮添加间隔
-  & + & {
+  &+& {
     margin-left: 12px;
   }
 
@@ -72,6 +72,7 @@
   }
 
   &.is-circle {
+    padding: 8px;
     border-radius: 50%;
   }
 
@@ -89,7 +90,7 @@
   }
 
   // 设置图标与按钮文本的间隔
-  [class*='mr-icon'] + span {
+  [class*='mr-icon']+span {
     margin-left: 6px;
   }
 }

@@ -19,10 +19,8 @@ import Button from './components/Button/Button.vue'
     <Button size="small">小号按钮</Button>
 
     <!-- 其他样式按钮 -->
-    <Button plain>朴素按钮</Button>
+    <Button type="primary" icon="star">图标按钮</Button>
     <Button round>圆角按钮</Button>
-    <Button circle></Button>
-
     <!-- 禁用状态 -->
     <Button disabled>禁用按钮</Button>
 

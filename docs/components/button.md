@@ -13,7 +13,7 @@ import Button from '../../src/components/Button/Button.vue'
 
 ## 基础用法
 
-使用 `type`, `plain`, `round` 和 `circle` 来定义按钮的样式。
+使用 `type` 来定义按钮的样式。
 <Button type="primary">Primary</Button>
 <Button type="success">Success</Button>
 <Button type="warning">Warning</Button>
@@ -30,17 +30,17 @@ import Button from '../../src/components/Button/Button.vue'
 
 ## 不同样式
 
-通过 `size` 属性设置按钮的大小：`large、small 或默认（中等）。`
+通过 `size` 属性设置按钮的大小：`large、small 或默认（medium）。`
 <Button size="large">Large</Button>
 <Button>Default</Button>
 <Button size="small">Small</Button>
 
-使用 `plain`, `round`, `circle`, `disabled`, `loading` 来自定义更丰富的按钮
+使用 `plain`, `round`, `disabled`, `loading` 和 `icon` 来自定义更丰富的按钮
 <Button plain>Plain Button</Button>
 <Button round>Round Button</Button>
-<Button circle icon="search" />
 <Button disabled>Disabled Button</Button>
 <Button loading>Loading Button</Button>
+<Button icon="star">Icon Button</Button>
 
 ```vue
 <Button size="large">Large</Button>
@@ -51,6 +51,7 @@ import Button from '../../src/components/Button/Button.vue'
 <Button circle icon="search" />
 <Button disabled>Disabled Button</Button>
 <Button loading>Loading Button</Button>
+<Button icon="star">Icon Button</Button>
 ```
 
 ## 原生属性
@@ -72,7 +73,6 @@ import Button from '../../src/components/Button/Button.vue'
 | `size`       | `string`  | —          | 按钮大小，可选值：`large` / `small`                                         |
 | `plain`      | `boolean` | `false`    | 是否为朴素按钮                                                              |
 | `round`      | `boolean` | `false`    | 是否为圆角按钮                                                              |
-| `circle`     | `boolean` | `false`    | 是否为圆形按钮                                                              |
 | `disabled`   | `boolean` | `false`    | 是否禁用按钮                                                                |
 | `nativeType` | `string`  | `'button'` | 原生按钮类型                                                                |
 | `autofocus`  | `boolean` | `false`    | 是否自动聚焦                                                                |

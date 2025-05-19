@@ -7,7 +7,6 @@ export interface ButtonProps {
   size?: ButtonSize
   plain?: boolean
   round?: boolean
-  circle?: boolean
   disabled?: boolean
   nativeType?: NativeType
   autofocus?: boolean
