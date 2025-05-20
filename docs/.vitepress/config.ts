@@ -30,6 +30,10 @@ export default defineConfig({
               text: 'Message',
               link: '/components/message',
             },
+            {
+              text: 'Alert',
+              link: '/components/alert',
+            },
           ],
         },
       ],

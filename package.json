@@ -15,8 +15,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:deploy": "gh-pages -d docs/.vitepress/dist",
-    "docs-action:deploy": "gh-pages -d docs/.vitepress/dist -r https://$GITHUB_TOKEN@github.com/HasonoCell/Mercury-Design.git -b gh-pages"
+    "docs:deploy": "gh-pages -d docs/.vitepress/dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

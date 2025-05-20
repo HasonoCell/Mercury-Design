@@ -6,6 +6,10 @@ import { computed, onMounted, ref, type CSSProperties } from 'vue'
 import { getLastBottomOffset } from './method'
 import useEventListener from '../../hooks/useEventListener'
 
+defineOptions({
+  name: 'Mercury-Message',
+})
+
 const props = withDefaults(defineProps<MessageProps>(), {
   type: 'info',
   duration: 3000,

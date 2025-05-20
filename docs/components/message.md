@@ -1,6 +1,6 @@
 ---
 title: Message
-description: Message 消息提示组件文档
+description: Message 组件文档
 ---
 
 <script setup> 

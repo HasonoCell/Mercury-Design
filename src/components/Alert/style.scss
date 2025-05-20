@@ -1,0 +1,48 @@
+.mr-alert {
+    --mr-alert-font-weight: var(--mr-font-weight-primary);
+    --mr-alert-bg-color: var(--mr-color-info-light-9);
+    --mr-alert-text-color: var(--mr-color-info);
+    --mr-alert-border-radius: var(--mr-border-radius-base);
+    --mr-alert-padding: 8px 16px;
+    --mr-alert-margin-top: 20px;
+}
+
+.mr-alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mr-alert-bg-color);
+    padding: var(--mr-alert-padding);
+    margin-top: var(--mr-alert-margin-top);
+    color: var(--mr-alert-text-color);
+    border-radius: var(--mr-alert-border-radius);
+    position: relative;
+    box-sizing: border-box;
+    font-weight: var(--mr-alert-font-weight);
+
+    .mr-alert-icon {
+        cursor: pointer;
+    }
+}
+
+@each $type in (success, warning, info, danger) {
+    .mr-alert--#{$type} {
+        --mr-alert-bg-color: var(--mr-color-#{$type}-light-9);
+        --mr-alert-text-color: var(--mr-color-#{$type});
+
+        &.mr-alert--dark {
+            --mr-alert-bg-color: var(--mr-color-#{$type});
+            --mr-alert-text-color: var(--mr-color-white);
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity var(--mr-transition-duration) ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
