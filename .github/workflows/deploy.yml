@@ -37,4 +37,4 @@ jobs:
           git config --global user.email "2105689721@qq.com"
 
       - name: 部署到 GitHub Pages
-        run: pnpm docs:deploy
+        run: pnpm docs-action:deploy

@@ -26,6 +26,10 @@ export default defineConfig({
               text: 'Switch',
               link: '/components/switch',
             },
+            {
+              text: 'Message',
+              link: '/components/message',
+            },
           ],
         },
       ],
