@@ -12,7 +12,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Components', link: '/components/' },
+      { text: 'Components', link: '/components/button' },
     ],
     sidebar: {
       '/': [
@@ -33,6 +33,10 @@ export default defineConfig({
             {
               text: 'Alert',
               link: '/components/alert',
+            },
+            {
+              text: 'Virtual-List',
+              link: '/components/virtual-list',
             },
           ],
         },

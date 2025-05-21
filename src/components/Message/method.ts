@@ -8,7 +8,7 @@ const messageInstances: MessageContext[] = shallowReactive([])
 const { nextZIndex } = useZIndex()
 
 let flag = 1
-const Message = (props: CreateMessageProps) => {
+export const Message = (props: CreateMessageProps) => {
   const id = `message_${flag++}`
   const container = document.createElement('div')
 
@@ -66,5 +66,3 @@ export const getLastBottomOffset = (id: string): number => {
 export const closeAll = () => {
   messageInstances.forEach((instance) => instance.destroy())
 }
-
-export default Message

@@ -54,8 +54,8 @@ Alert 组件提供了两个不同的主题：`light` 和 `dark`，通过设置 `
 
 ## API
 
-| Name     | Description  | Type                                       | Default |
-| -------- | ------------ | ------------------------------------------ | ------- |
-| type     | Alert 类型   | enum - 'success' 'warning' 'danger' 'info' | —       |
-| effect   | 主题样式     | enum - 'light' \| 'dark'                   | light   |
-| closable | 是否可以关闭 | boolean                                    | false   |
+| Name       | Description  | Type                                           | Default |
+| ---------- | ------------ | ---------------------------------------------- | ------- |
+| `type`     | Alert 类型   | `enum - 'success'` `'warning' 'danger' 'info'` | —       |
+| `effect`   | 主题样式     | `enum - 'light'` \| `'dark'`                   | `light` |
+| `closable` | 是否可以关闭 | `boolean`                                      | `false` |

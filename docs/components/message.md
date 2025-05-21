@@ -4,7 +4,7 @@ description: Message 组件文档
 ---
 
 <script setup> 
-import Message, { closeAll } from '../../src/components/Message/method.ts'
+import { Message, closeAll } from '../../src/components/Message/method.ts'
 import Button from '../../src/components/Button/Button.vue'
 import { h } from 'vue'
 </script>
@@ -70,25 +70,25 @@ closeAll()
 
 ### Message 配置项
 
-| 参数名    | 说明                              | 类型                                           | 默认值  |
-| --------- | --------------------------------- | ---------------------------------------------- | ------- |
-| message   | 消息文字                          | `'string' \| 'vNode'`                          | -       |
-| type      | 消息类型                          | `'success' \| 'warning' \| 'info' \| 'danger'` | `info`  |
-| showClose | 是否显示关闭按钮                  | `boolean`                                      | `false` |
-| duration  | 显示时间（毫秒），0表示不自动关闭 | `number`                                       | `3000`  |
+| 参数名      | 说明                              | 类型                                           | 默认值  |
+| ----------- | --------------------------------- | ---------------------------------------------- | ------- |
+| `message`   | 消息文字                          | `'string' \| 'vNode'`                          | -       |
+| `type`      | 消息类型                          | `'success' \| 'warning' \| 'info' \| 'danger'` | `info`  |
+| `showClose` | 是否显示关闭按钮                  | `boolean`                                      | `false` |
+| `duration`  | 显示时间（毫秒），0表示不自动关闭 | `number`                                       | `3000`  |
 
 ---
 
 ### Message 方法（实例方法）
 
-| 方法名 | 说明               | 类型         |
-| ------ | ------------------ | ------------ |
-| close  | 关闭当前的 Message | `() => void` |
+| 方法名  | 说明               | 类型         |
+| ------- | ------------------ | ------------ |
+| `close` | 关闭当前的 Message | `() => void` |
 
 ---
 
 ### 全局方法
 
-| 方法名   | 说明                   | 类型         |
-| -------- | ---------------------- | ------------ |
-| closeAll | 关闭当前所有的 Message | `() => void` |
+| 方法名     | 说明                   | 类型         |
+| ---------- | ---------------------- | ------------ |
+| `closeAll` | 关闭当前所有的 Message | `() => void` |
