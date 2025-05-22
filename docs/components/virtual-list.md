@@ -4,7 +4,7 @@ description: Virtual-List 组件文档
 ---
 
 <script setup> 
-import VirtualList from '../../src/components/Virtual-List/Virtual-List.vue' 
+import VirtualList from '../../src/components/Virtual-List/FixedVList.vue' 
 import { ref } from 'vue'
 
 const listData = ref(Array.from({ length: 10000 }, (_, i) => `当前显示数据 ${i + 1}`))

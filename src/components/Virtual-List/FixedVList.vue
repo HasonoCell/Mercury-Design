@@ -3,6 +3,10 @@ import { computed, ref } from 'vue'
 import type { FixedVLProps } from './types'
 import { throttle } from 'lodash-es'
 
+defineOptions({
+  name: 'Mercury-FixedVList',
+})
+
 const props = withDefaults(defineProps<FixedVLProps>(), {
   itemHeight: 50,
 })
@@ -30,6 +34,7 @@ const endIndex = computed(() => {
 const renderData = computed(() => {
   const realStartIndex = Math.max(0, startIndex.value - viewItemsCount.value)
 
+  // 这里不是 props.data.length - 1，是因为后面截取 renderData 时 slice 方法截取左闭右开区间
   const realEndIndex = Math.min(endIndex.value, props.data.length)
   return props.data.slice(realStartIndex, realEndIndex)
 })

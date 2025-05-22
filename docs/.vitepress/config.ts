@@ -38,6 +38,10 @@ export default defineConfig({
               text: 'Virtual-List',
               link: '/components/virtual-list',
             },
+            {
+              text: 'Collapse',
+              link: '/components/collapse',
+            },
           ],
         },
       ],
