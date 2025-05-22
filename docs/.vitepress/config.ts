@@ -42,6 +42,10 @@ export default defineConfig({
               text: 'Collapse',
               link: '/components/collapse',
             },
+            {
+              text: 'Tooltip',
+              link: '/components/tooltip',
+            },
           ],
         },
       ],

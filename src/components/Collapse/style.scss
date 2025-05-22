@@ -1,64 +1,64 @@
 .mr-collapse {
-    --mr-collapse-border-color: var(--mr-border-color-light);
-    --mr-collapse-header-height: 48px;
-    --mr-collapse-header-bg-color: var(--mr-fill-color-blank);
-    --mr-collapse-header-text-color: var(--mr-text-color-primary);
-    --mr-collapse-header-font-size: 13px;
-    --mr-collapse-content-bg-color: var(--mr-fill-color-blank);
-    --mr-collapse-content-font-size: 13px;
-    --mr-collapse-content-text-color: var(--mr-text-color-primary);
-    --mr-collapse-disabled-text-color: var(--mr-disabled-text-color);
-    --mr-collapse-disabled-border-color: var(--mr-border-color-lighter);
-    border-top: 1px solid var(--mr-collapse-border-color);
-    border-bottom: 1px solid var(--mr-collapse-border-color);
+  --mr-collapse-border-color: var(--mr-border-color-light);
+  --mr-collapse-header-height: 48px;
+  --mr-collapse-header-bg-color: var(--mr-fill-color-blank);
+  --mr-collapse-header-text-color: var(--mr-text-color-primary);
+  --mr-collapse-header-font-size: 13px;
+  --mr-collapse-content-bg-color: var(--mr-fill-color-blank);
+  --mr-collapse-content-font-size: 13px;
+  --mr-collapse-content-text-color: var(--mr-text-color-primary);
+  --mr-collapse-disabled-text-color: var(--mr-disabled-text-color);
+  --mr-collapse-disabled-border-color: var(--mr-border-color-lighter);
+  border-top: 1px solid var(--mr-collapse-border-color);
+  border-bottom: 1px solid var(--mr-collapse-border-color);
 }
 
 .mr-collapse-item__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--mr-collapse-header-height);
-    line-height: var(--mr-collapse-header-height);
-    background-color: var(--mr-collapse-header-bg-color);
-    color: var(--mr-collapse-header-text-color);
-    cursor: pointer;
-    font-size: var(--mr-collapse-header-font-size);
-    font-weight: 500;
-    transition: border-bottom-color var(--mr-transition-duration);
-    outline: none;
-    border-bottom: 1px solid var(--mr-collapse-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--mr-collapse-header-height);
+  line-height: var(--mr-collapse-header-height);
+  background-color: var(--mr-collapse-header-bg-color);
+  color: var(--mr-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--mr-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--mr-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--mr-collapse-border-color);
 
-    &.is-disabled {
-        color: var(--mr-collapse-disabled-text-color);
-        cursor: not-allowed;
-        background-image: none;
-    }
+  &.is-disabled {
+    color: var(--mr-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
 
-    &.is-active {
-        border-bottom-color: transparent;
-
-        .header-arrow {
-            transform: rotate(90deg);
-        }
-    }
+  &.is-active {
+    border-bottom-color: transparent;
 
     .header-arrow {
-        transition: transform var(--mr-transition-duration);
+      transform: rotate(90deg);
     }
+  }
+
+  .header-arrow {
+    transition: transform var(--mr-transition-duration);
+  }
 }
 
 .mr-collapse-item__content {
-    will-change: height;
-    background-color: var(--mr-collapse-content-bg-color);
-    overflow: hidden;
-    box-sizing: border-box;
-    font-size: var(--mr-collapse-content-font-size);
-    color: var(--mr-collapse-content-text-color);
-    border-bottom: 1px solid var(--mr-collapse-border-color);
-    padding-bottom: 25px;
+  will-change: height;
+  background-color: var(--mr-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--mr-collapse-content-font-size);
+  color: var(--mr-collapse-content-text-color);
+  border-bottom: 1px solid var(--mr-collapse-border-color);
+  padding-bottom: 25px;
 }
 
 .slide-enter-active,
 .slide-leave-active {
-    transition: height var(--mr-transition-duration) ease-in-out;
+  transition: height var(--mr-transition-duration) ease-in-out;
 }
