@@ -5,9 +5,4 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fas)
 
-export default {
-  ...DefaultTheme,
-  enhanceApp(ctx) {
-    DefaultTheme.enhanceApp(ctx)
-  },
-}
+export default DefaultTheme

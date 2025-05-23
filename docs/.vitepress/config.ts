@@ -1,19 +1,14 @@
 import { defineConfig } from 'vitepress'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 
 export default defineConfig({
   title: 'Mercury-Design',
   description: 'A simple UI component library for Vue3',
   base: '/Mercury-Design/',
   // vite 配置项是为了让文档中可以书写自定义组件（支持JSX/TSX语法）
-  markdown: {
-    config: (md) => {
-      md.use(demoblockPlugin)
-    },
-  },
+
   vite: {
-    plugins: [vueJsx(), demoblockVitePlugin()],
+    plugins: [vueJsx()],
   },
   themeConfig: {
     nav: [
