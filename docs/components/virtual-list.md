@@ -1,6 +1,6 @@
 ---
 title: Virtual-List
-description: Virtual-List 组件文档
+description: 用于高效渲染超长定高列表的虚拟滚动组件。
 ---
 
 <script setup> 

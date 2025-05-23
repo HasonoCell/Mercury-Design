@@ -1,6 +1,6 @@
 ---
 title: Switch
-description: Switch 组件文档
+description: 用于表示两种状态之间的切换，支持自定义值、尺寸和禁用状态。
 ---
 
 <script setup>

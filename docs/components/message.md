@@ -1,6 +1,6 @@
 ---
 title: Message
-description: Message 组件文档
+description: 用于显示全局消息提示，支持多种类型和自定义配置。
 ---
 
 <script setup> 

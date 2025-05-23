@@ -1,6 +1,6 @@
 ---
 title: Tooltip
-description: Tooltip 组件文档
+description: 常用于展示悬浮提示信息，支持多种触发方式和位置配置。
 ---
 
 <script setup>
@@ -90,16 +90,17 @@ const tooltipRef = ref()
 
 通过 `manual` 模式结合 `ref` 实现手动控制：
 
-<template>
   <Tooltip ref="tooltipRef" content="手动控制提示" manual>
-    <Button>触发元素</Button>
+  <Button>触发元素</Button>
   </Tooltip>
+  <div style="display: inline-flex; width: 20px;" />
   <Button @click="tooltipRef.open()">手动打开</Button>
   <Button @click="tooltipRef.close()">手动关闭</Button>
-</template>
 
 ```vue
-<script setup>
+<script setup lang="ts">
+import Button from './components/Button/Button.vue'
+import Tooltip from './components/Tooltip/Tooltip.vue'
 import { ref } from 'vue'
 const tooltipRef = ref()
 </script>

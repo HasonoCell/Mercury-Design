@@ -1,6 +1,6 @@
 ---
 title: Alert
-description: Alert 组件文档
+description: 用于页面中展示重要的提示信息。
 ---
 
 <script setup>

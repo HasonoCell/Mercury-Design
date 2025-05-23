@@ -1,6 +1,6 @@
 ---
 title: Collapse
-description: Collapse 折叠面板组件文档
+description: 用于组织和折叠内容区域，支持手风琴模式和多展开模式。
 ---
 
 <script setup>

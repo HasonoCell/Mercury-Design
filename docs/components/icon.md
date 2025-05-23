@@ -1,6 +1,6 @@
 ---
 title: Icon
-description: Icon 组件文档
+description: 通用的图标组件，基于 FontAwesome 实现，支持主题颜色和自定义颜色以及属性。
 ---
 
 <script setup>

@@ -1,6 +1,6 @@
 ---
 title: Button
-description: Button 组件文档
+description: 常用的操作按钮组件，支持多种类型、尺寸和状态。
 ---
 
 <script setup>
