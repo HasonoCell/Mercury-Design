@@ -5,7 +5,7 @@ import type { CollapseItemProps } from './types'
 import { collapseContextKey } from './types'
 
 defineOptions({
-  name: 'Mercury-Collapse-Item',
+  name: 'MercuryCollapseItem',
 })
 
 const props = withDefaults(defineProps<CollapseItemProps>(), {

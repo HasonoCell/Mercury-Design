@@ -7,7 +7,7 @@ import { getLastBottomOffset } from './method'
 import useEventListener from '../../hooks/useEventListener'
 
 defineOptions({
-  name: 'Mercury-Message',
+  name: 'MercuryMessage',
 })
 
 const props = withDefaults(defineProps<MessageProps>(), {

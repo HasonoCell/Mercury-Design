@@ -4,7 +4,7 @@ import type { InputEmits, InputProps, InputInstance } from './types'
 import Icon from '../Icon/Icon.vue'
 
 defineOptions({
-  name: 'Mercury Input',
+  name: 'MercuryInput',
 })
 
 const props = withDefaults(defineProps<InputProps>(), {

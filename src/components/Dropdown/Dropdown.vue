@@ -2,11 +2,11 @@
 import RenderVNode from '../Common/RenderVNode'
 import Tooltip from '../Tooltip/Tooltip.vue'
 import type { TooltipInstance } from '../Tooltip/types'
-import type { DropdownEmits, DropdownInstance, DropdownProps, MenuOption } from './type'
+import type { DropdownEmits, DropdownInstance, DropdownProps, MenuOption } from './types'
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'Mercury Dropdown',
+  name: 'MercuryDropdown',
 })
 
 const props = withDefaults(defineProps<DropdownProps>(), {

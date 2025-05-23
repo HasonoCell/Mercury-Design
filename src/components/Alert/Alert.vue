@@ -4,7 +4,7 @@ import type { AlertEmits, AlertProps } from './types'
 import Icon from '../Icon/Icon.vue'
 
 defineOptions({
-  name: 'Mercury-Alert',
+  name: 'MercuryAlert',
 })
 
 withDefaults(defineProps<AlertProps>(), {

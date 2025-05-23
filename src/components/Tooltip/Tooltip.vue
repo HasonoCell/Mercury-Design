@@ -6,7 +6,7 @@ import { debounce } from 'lodash-es'
 import useClickOutside from '../../hooks/useClickOutside'
 
 defineOptions({
-  name: 'Mercury Tooltip',
+  name: 'MercuryTooltip',
 })
 
 const props = withDefaults(defineProps<TooltipProps>(), {

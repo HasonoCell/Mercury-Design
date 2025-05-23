@@ -3,7 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import type { SwitchProps, SwitchEmits } from './types'
 
 defineOptions({
-  name: 'Mercury-Switch',
+  name: 'MercurySwitch',
   inheritAttrs: false,
 })
 

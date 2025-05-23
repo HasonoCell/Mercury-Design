@@ -3,7 +3,7 @@ import { provide, ref, watch } from 'vue'
 import { collapseContextKey, type CollapseEmits, type CollapseProps, type NameType } from './types'
 
 defineOptions({
-  name: 'Mercury-Collapse',
+  name: 'MercuryCollapse',
 })
 
 const props = defineProps<CollapseProps>()

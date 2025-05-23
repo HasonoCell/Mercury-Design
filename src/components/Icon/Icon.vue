@@ -1,20 +1,15 @@
 <script setup lang="ts">
-import type { FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
+import type { IconProps } from './types'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { omit } from 'lodash-es'
 import { computed } from 'vue'
 
 defineOptions({
-  name: 'Mercury-Icon',
+  name: 'MercuryIcon',
   inheritAttrs: false,
 })
 
-const props = defineProps<
-  FontAwesomeIconProps & {
-    type?: 'primary' | 'success' | 'warning' | 'danger' | 'info'
-    color?: string
-  }
->()
+const props = defineProps<IconProps>()
 
 const filteredProps = computed(() => omit(props, ['type', 'color']))
 

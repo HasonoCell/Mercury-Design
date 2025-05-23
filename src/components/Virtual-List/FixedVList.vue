@@ -4,7 +4,7 @@ import type { FixedVLProps } from './types'
 import { throttle } from 'lodash-es'
 
 defineOptions({
-  name: 'Mercury-FixedVList',
+  name: 'MercuryFixedVList',
 })
 
 const props = withDefaults(defineProps<FixedVLProps>(), {

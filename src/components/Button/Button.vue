@@ -4,7 +4,7 @@ import type { ButtonProps } from './types'
 import Icon from '../Icon/Icon.vue'
 
 defineOptions({
-  name: 'Mercury-Button',
+  name: 'MercuryButton',
 })
 
 withDefaults(defineProps<ButtonProps>(), {

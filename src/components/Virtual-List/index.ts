@@ -1,3 +1,9 @@
-import VirtualList from './Virtual-List.vue'
+import { App } from 'vue'
+import FixedVList from './FixedVList.vue'
 
-export default VirtualList
+FixedVList.install = (app: App) => {
+  app.component(FixedVList.name!, FixedVList)
+}
+
+export default FixedVList
+export * from './types'

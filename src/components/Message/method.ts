@@ -8,7 +8,7 @@ const messageInstances: MessageContext[] = shallowReactive([])
 const { nextZIndex } = useZIndex()
 
 let flag = 1
-export const Message = (props: CreateMessageProps) => {
+export const createMessage = (props: CreateMessageProps) => {
   const id = `message_${flag++}`
   const container = document.createElement('div')
 
