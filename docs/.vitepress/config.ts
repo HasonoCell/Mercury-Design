@@ -51,6 +51,10 @@ export default defineConfig({
               text: 'Dropdown',
               link: '/components/dropdown',
             },
+            {
+              text: 'Input',
+              link: '/components/input',
+            },
           ],
         },
       ],
