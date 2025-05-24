@@ -73,7 +73,7 @@ if (!props.manual) {
 
 useClickOutside(containerRef, () => {
   if (isOpen.value) {
-    if (props.trigger === 'click') return close()
+    if (props.trigger === 'click' && !props.manual) return close()
     return emits('click-outside', true)
   }
 })

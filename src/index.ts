@@ -9,6 +9,7 @@ import Message from './components/Message/Message.vue'
 import { createMessage } from './components/Message'
 import Switch from './components/Switch/Switch.vue'
 import Tooltip from './components/Tooltip/Tooltip.vue'
+import Select from './components/Select/Select.vue'
 import type { App } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -27,6 +28,7 @@ const components = [
   Message,
   Switch,
   Tooltip,
+  Select,
 ]
 
 const install = (app: App) => {
@@ -46,6 +48,7 @@ export {
   Message,
   Switch,
   Tooltip,
+  Select,
   install,
   createMessage,
 }
