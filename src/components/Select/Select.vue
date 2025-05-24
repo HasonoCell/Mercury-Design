@@ -8,6 +8,7 @@ import type { SelectProps, SelectEmits, SelectOption, SelectStates } from './typ
 import type { TooltipInstance } from '../Tooltip/types'
 import type { InputInstance } from '../Input/types'
 import { computed, reactive, ref, watch } from 'vue'
+import { debounce } from 'lodash-es'
 
 defineOptions({
   name: 'MercurySelect',
@@ -45,6 +46,7 @@ const popperOptions: any = {
 const tooltipRef = ref<TooltipInstance>()
 const inputRef = ref<InputInstance>()
 const isDropdownShow = ref<boolean>(false)
+const filteredOptions = ref<SelectOption[]>(props.options)
 const selectState = reactive<SelectStates>({
   inputValue: initOption ? initOption.label : '',
   selectedOption: initOption,
@@ -59,10 +61,27 @@ const showClearIcon = computed(() => {
     selectState.inputValue.trim() !== ''
   )
 })
+const filteredPlaceholder = computed(() => {
+  return props.filterable && selectState.selectedOption && isDropdownShow.value
+    ? selectState.selectedOption.label
+    : props.placeholder
+})
 
 const handleDropdown = (show: boolean) => {
-  if (show) tooltipRef.value?.open()
-  else tooltipRef.value?.close()
+  if (show) {
+    if (props.filterable && selectState.selectedOption) {
+      selectState.inputValue = ''
+    }
+    if (props.filterable) {
+      generateFilterOptions(selectState.inputValue)
+    }
+    tooltipRef.value?.open()
+  } else {
+    tooltipRef.value?.close()
+    if (props.filterable) {
+      selectState.inputValue = selectState.selectedOption ? selectState.selectedOption.label : ''
+    }
+  }
 
   isDropdownShow.value = show
   emits('visible-change', show)
@@ -79,8 +98,8 @@ const itemSelect = (item: SelectOption) => {
   if (item.disabled) return
   selectState.inputValue = item.label
   selectState.selectedOption = item
-  emits('change', item.label)
-  emits('update:modelValue', item.label)
+  emits('change', item.value)
+  emits('update:modelValue', item.value)
   handleDropdown(false)
   inputRef.value?.ref.focus()
 }
@@ -98,12 +117,35 @@ const handleClear = () => {
   emits('update:modelValue', '')
 }
 
+const generateFilterOptions = (searchVal: string) => {
+  if (!props.filterable) return
+
+  if (props.filterFunc) {
+    filteredOptions.value = props.filterFunc(searchVal)
+  } else {
+    filteredOptions.value = props.options.filter((option) => option.label.includes(searchVal))
+  }
+  console.log(filteredOptions.value)
+}
+
+const handleFilter = debounce(() => {
+  generateFilterOptions(selectState.inputValue)
+})
+
 const NOOP = () => {}
 
 watch(
   () => props.modelValue,
   (newVal) => {
-    selectState.inputValue = newVal
+    const option = findOption(newVal)
+    selectState.inputValue = option ? option.label : ''
+  },
+)
+
+watch(
+  () => props.options,
+  (newVal) => {
+    filteredOptions.value = newVal
   },
 )
 </script>
@@ -125,7 +167,14 @@ watch(
       @click-outside="handleDropdown(false)"
       manual
     >
-      <Input v-model="selectState.inputValue" :placeholder="placeholder" readonly ref="inputRef">
+      <Input
+        v-model="selectState.inputValue"
+        :disabled="disabled"
+        :placeholder="filteredPlaceholder"
+        :readonly="!filterable || !isDropdownShow"
+        ref="inputRef"
+        @input="handleFilter"
+      >
         <template #suffix>
           <Icon
             icon="circle-xmark"
@@ -146,7 +195,7 @@ watch(
       </Input>
       <template #content>
         <ul class="mr-select__menu">
-          <template v-for="(item, index) in options" :key="index">
+          <template v-for="item in filteredOptions" :key="item.value">
             <li
               class="mr-select__menu-item"
               :class="{
@@ -156,7 +205,7 @@ watch(
               :id="`select-item-${item.value}`"
               @click.stop="itemSelect(item)"
             >
-              <RenderVNode :vnode="item.label" />
+              <RenderVNode :vnode="renderLabel ? renderLabel(item) : item.label" />
             </li>
           </template>
         </ul>

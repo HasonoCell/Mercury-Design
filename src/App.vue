@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 import { ref } from 'vue'
 import Select from '@/components/Select/Select.vue'
@@ -13,7 +14,13 @@ const options2 = [
 ]
 </script>
 <template>
-  <Select v-model="test" placeholder="基础选择器，请选择" :options="options2" clearable />
+  <Select
+    v-model="test"
+    placeholder="基础选择器，请选择"
+    :options="options2"
+    clearable
+    filterable
+  />
 
   <div style="display: inline-flex; width: 20px"></div>
 
