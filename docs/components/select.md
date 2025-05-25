@@ -57,7 +57,7 @@ v-model="selected"
 
 ```vue
 <script setup>
-import Select from '../../src/components/Select/Select.vue'
+import Select from '@hasonocell/mercury-design'
 
 const customRender = (option) => {
   return h('div', h('b', option.label))

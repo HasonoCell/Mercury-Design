@@ -21,8 +21,8 @@ import Icon from '../../src/components/Icon/Icon.vue'
 <Icon icon="cookie-bite" size="2x"/>
 
 ```vue
-<Icon icon="user" />
-<Icon icon="cookie-bite" />
+<Icon icon="user" size="2x" />
+<Icon icon="cookie-bite" size="2x" />
 ```
 
 使用 `type` 属性设置图标主题颜色：

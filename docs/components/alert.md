@@ -46,10 +46,10 @@ Alert 组件提供了两个不同的主题：`light` 和 `dark`，通过设置 `
 ## 不可关闭
 
 可以设置 Alert 组件是否为可关闭状态， `closable` 属性决定 Alert 组件是否可关闭， 该属性接受一个 `Boolean`，默认为 `false`。
-<Alert type="success" :closable="false">without close</Alert>
+<Alert type="success" :closable="false">不可关闭</Alert>
 
 ```vue
-<Alert type="success" :closable="false">without close</Alert>
+<Alert type="success" :closable="false">不可关闭</Alert>
 ```
 
 ## API

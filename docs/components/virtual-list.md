@@ -20,7 +20,7 @@ const listData = ref(Array.from({ length: 10000 }, (_, i) => `当前显示数据
 建议在外层添加一个父元素 `container` 用来控制列表的高度，作为子元素的列表会自动占满父元素。
 
 <div style="width: 100%; height: 500px">
-<VirtualList :data="listData"/>
+<FixedVList :data="listData"/>
 </div>
 
 ```vue
@@ -32,6 +32,7 @@ const listData = ref(Array.from({ length: 10000 }, (_, i) => `当前显示数据
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { FixedVList } from '@hasonocell/mercury-design'
 const listData = ref(Array.from({ length: 100000 }, (_, i) => `当前显示数据 ${i + 1}`))
 </script>
 ```

@@ -18,6 +18,7 @@ import Switch from '../../src/components/Switch/Switch.vue'
 
 ```vue
 <script setup>
+import { Switch } from '@hasonocell/mercury-design'
 import { ref } from 'vue'
 const value = ref(false)
 </script>

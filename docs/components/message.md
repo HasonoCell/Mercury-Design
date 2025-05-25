@@ -66,29 +66,35 @@ createMessage({ message: 'hello world3', duration: 0 })
 closeAll()
 }"> 全部关闭 </Button>
 
-## API
+```vue
+<script setup>
+import { createMessage, closeAll } from '@hasonocell/mercury-design'
+import Button from '@hasonocell/mercury-design'
+const open = () => {
+  createMessage({ message: 'hello world1', duration: 0 })
+  createMessage({ message: 'hello world2', duration: 0 })
+  createMessage({ message: 'hello world3', duration: 0 })
+}
+const close = () => {
+  closeAll()
+}
+</script>
+<template>
+  <Button @click="open"> 创建三条消息 </Button>
+  <Button @click="close"> 全部关闭 </Button>
+</template>
+```
 
-### Message 配置项
+## API ### Message 配置项 | 参数名 | 说明 | 类型 | 默认值 | | ----------- |
 
-| 参数名      | 说明                              | 类型                                           | 默认值  |
-| ----------- | --------------------------------- | ---------------------------------------------- | ------- |
-| `message`   | 消息文字                          | `'string' \| 'vNode'`                          | -       |
-| `type`      | 消息类型                          | `'success' \| 'warning' \| 'info' \| 'danger'` | `info`  |
-| `showClose` | 是否显示关闭按钮                  | `boolean`                                      | `false` |
-| `duration`  | 显示时间（毫秒），0表示不自动关闭 | `number`                                       | `3000`  |
+--------------------------------- | ---------------------------------------------- | ------- | |
+`message` | 消息文字 | `'string' \| 'vNode'` | - | | `type` | 消息类型 | `'success' \| 'warning' \|
+'info' \| 'danger'` | `info` | | `showClose` | 是否显示关闭按钮 | `boolean` | `false` | | `duration`
+| 显示时间（毫秒），0表示不自动关闭 | `number` | `3000` | --- ### Message 方法（实例方法） | 方法名
+| 说明 | 类型 | | ------- | ------------------ | ------------ | | `close` | 关闭当前的 Message | `()
+=> void` | --- ### 全局方法 | 方法名 | 说明 | 类型 | | ---------- | ---------------------- |
+------------ | | `closeAll` | 关闭当前所有的 Message | `() => void` |
 
----
+```
 
-### Message 方法（实例方法）
-
-| 方法名  | 说明               | 类型         |
-| ------- | ------------------ | ------------ |
-| `close` | 关闭当前的 Message | `() => void` |
-
----
-
-### 全局方法
-
-| 方法名     | 说明                   | 类型         |
-| ---------- | ---------------------- | ------------ |
-| `closeAll` | 关闭当前所有的 Message | `() => void` |
+```

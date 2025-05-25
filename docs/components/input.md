@@ -16,7 +16,7 @@ import Icon from '../../src/components/Icon/Icon.vue'
 ```vue
 <script setup>
 import { ref } from 'vue'
-import Input from '@/components/Input/Input.vue'
+import Input from '@hasonocell/mercury-design'
 const test = ref('')
 </script>
 <template>

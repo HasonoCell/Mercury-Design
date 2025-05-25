@@ -6,10 +6,11 @@ import Dropdown from './components/Dropdown/Dropdown.vue'
 import Icon from './components/Icon/Icon.vue'
 import Input from './components/Input/Input.vue'
 import Message from './components/Message/Message.vue'
-import { createMessage } from './components/Message'
+import { createMessage, closeAll } from './components/Message/method'
 import Switch from './components/Switch/Switch.vue'
 import Tooltip from './components/Tooltip/Tooltip.vue'
 import Select from './components/Select/Select.vue'
+import FixedVList from './components/Virtual-List/FixedVList.vue'
 import type { App } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -29,6 +30,7 @@ const components = [
   Switch,
   Tooltip,
   Select,
+  FixedVList,
 ]
 
 const install = (app: App) => {
@@ -49,8 +51,9 @@ export {
   Switch,
   Tooltip,
   Select,
-  install,
+  FixedVList,
   createMessage,
+  closeAll,
 }
 
 export default {

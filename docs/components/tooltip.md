@@ -99,8 +99,8 @@ const tooltipRef = ref()
 
 ```vue
 <script setup lang="ts">
-import Button from './components/Button/Button.vue'
-import Tooltip from './components/Tooltip/Tooltip.vue'
+import Button from '@hasonocell/mercury-design'
+import Tooltip from '@hasonocell/mercury-design'
 import { ref } from 'vue'
 const tooltipRef = ref()
 </script>

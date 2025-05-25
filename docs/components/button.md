@@ -48,7 +48,6 @@ import Button from '../../src/components/Button/Button.vue'
 <Button size="small">Small</Button>
 <Button plain>Plain Button</Button>
 <Button round>Round Button</Button>
-<Button circle icon="search" />
 <Button disabled>Disabled Button</Button>
 <Button loading>Loading Button</Button>
 <Button icon="star">Icon Button</Button>
