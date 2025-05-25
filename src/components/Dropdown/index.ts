@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import Dropdown from './Dropdown.vue'
 
 Dropdown.install = (app: App) => {

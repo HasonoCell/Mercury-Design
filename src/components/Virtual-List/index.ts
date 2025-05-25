@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import FixedVList from './FixedVList.vue'
 
 FixedVList.install = (app: App) => {

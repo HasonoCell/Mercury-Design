@@ -1,13 +1,50 @@
 {
   "name": "mercury-design",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Vue3 components library",
+  "author": {
+    "name": "HasonoCell"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Components",
+    "Vue3",
+    "UI"
+  ],
+  "homepage": "https://hasonocell.github.io/Mercury-Design/",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/HasonoCell/Mercury-Design"
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "sideEffects": [
+    "dist/index.css"
+  ],
+  "main": "./dist/umd/mercury-design.umd.cjs",
+  "module": "./dist/es/mercury-design.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/es/mercury-design.js",
+      "require": "./dist/umd/mercury-design.umd.cjs",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/": {
+      "import": "./dist/",
+      "require": "./dist/"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "pnpm build-only && pnpm move-style",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only": "run-p build-es build-umd",
+    "build-umd": "vite build --config vite.umd.config.ts",
+    "build-es": "vite build --config vite.es.config.ts",
+    "move-style": "move-file dist/es/index.css dist/index.css",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
@@ -22,7 +59,9 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@popperjs/core": "^2.11.8",
+    "@popperjs/core": "^2.11.8"
+  },
+  "peerDependencies": {
     "vue": "^3.5.14"
   },
   "devDependencies": {
@@ -46,16 +85,19 @@
     "lint-staged": "^16.0.0",
     "lodash-es": "^4.17.21",
     "mockjs": "^1.1.0",
+    "move-file-cli": "^3.0.0",
     "npm-run-all2": "^7.0.2",
     "prettier": "3.5.3",
     "sass": "^1.89.0",
     "sass-embedded": "^1.89.0",
     "typescript": "~5.8.3",
     "vite": "^5.4.19",
+    "vite-plugin-dts": "^4.5.4",
     "vite-plugin-vue-devtools": "^7.7.6",
     "vitepress": "^1.6.3",
     "vitest": "^3.1.4",
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^2.2.10",
+    "vue": "^3.5.14"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [

@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<MessageProps>(), {
   offset: 20,
 })
 
-let timer: number
+let timer: ReturnType<typeof setTimeout>
 const visible = ref<boolean>(false)
 const messageRef = ref<HTMLDivElement>()
 const height = ref<number>(0)

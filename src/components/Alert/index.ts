@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import Alert from './Alert.vue'
 
 Alert.install = (app: App) => {
