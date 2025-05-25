@@ -1,6 +1,6 @@
 {
-  "name": "mercury-design",
-  "version": "1.0.0",
+  "name": "@hasonocell/mercury-design",
+  "version": "1.0.1",
   "description": "Vue3 components library",
   "author": {
     "name": "HasonoCell"
@@ -53,7 +53,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:deploy": "gh-pages -d docs/.vitepress/dist",
-    "register:components": "vitepress-rc"
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
