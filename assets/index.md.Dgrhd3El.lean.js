@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as h}from"./chunks/framework.DWuqvBrN.js";const g=JSON.parse('{"title":"Mercury-Design","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),t={name:"index.md"};function l(e,s,p,k,r,d){return n(),a("div",null,s[0]||(s[0]=[h("",12)]))}const c=i(t,[["render",l]]);export{g as __pageData,c as default};
