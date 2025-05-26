@@ -14,7 +14,7 @@ import CollapseItem from '../../src/components/Collapse/CollapseItem.vue'
 
 ## 基础用法
 
-通过 `v-model` 控制展开面板，使用 `accordion` 开启手风琴模式：
+通过 `v-model` 控制展开面板：
 <Collapse v-model="activeNames" :accordion="false">
 <CollapseItem name="1" title="面板1">内容区域</CollapseItem>
 <CollapseItem name="2" title="面板2">内容区域</CollapseItem>
@@ -23,7 +23,30 @@ import CollapseItem from '../../src/components/Collapse/CollapseItem.vue'
 
 ```vue
 <template>
-  <Collapse v-model="activeNames" :accordion="false">
+  <Collapse v-model="activeNames">
+    <CollapseItem name="1" title="面板1">内容区域</CollapseItem>
+    <CollapseItem name="2" title="面板2">内容区域</CollapseItem>
+    <CollapseItem name="3" title="面板3">内容区域</CollapseItem>
+  </Collapse>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const activeNames = ref(['1'])
+</script>
+```
+
+使用 `accordion` 开启手风琴模式：
+
+<Collapse v-model="activeNames" :accordion="true">
+<CollapseItem name="1" title="面板1">内容区域</CollapseItem>
+<CollapseItem name="2" title="面板2">内容区域</CollapseItem>
+<CollapseItem name="3" title="面板3">内容区域</CollapseItem>
+</Collapse>
+
+```vue
+<template>
+  <Collapse v-model="activeNames" :accordion="true">
     <CollapseItem name="1" title="面板1">内容区域</CollapseItem>
     <CollapseItem name="2" title="面板2">内容区域</CollapseItem>
     <CollapseItem name="3" title="面板3">内容区域</CollapseItem>

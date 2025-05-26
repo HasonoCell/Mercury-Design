@@ -4,7 +4,7 @@ description: 用于高效渲染超长定高列表的虚拟滚动组件。
 ---
 
 <script setup> 
-import VirtualList from '../../src/components/Virtual-List/FixedVList.vue' 
+import FixedVList from '../../src/components/Virtual-List/FixedVList.vue' 
 import { ref } from 'vue'
 
 const listData = ref(Array.from({ length: 10000 }, (_, i) => `当前显示数据 ${i + 1}`))
@@ -26,7 +26,7 @@ const listData = ref(Array.from({ length: 10000 }, (_, i) => `当前显示数据
 ```vue
 <template>
   <div style="width: 100%; height: 500px">
-    <VirtualList :data="listData" />
+    <FixedVList :data="listData" />
   </div>
 </template>
 
