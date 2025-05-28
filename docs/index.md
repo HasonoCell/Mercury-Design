@@ -2,6 +2,7 @@
 
 A simple UI component library for Vue 3  
 仿 Element-Plus 风格的 Vue3 组件库。
+此项目长期维护，封装自己开发过程中的常用组件或学习到的组件。
 
 ## 安装
 

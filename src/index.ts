@@ -11,6 +11,7 @@ import Switch from './components/Switch/Switch.vue'
 import Tooltip from './components/Tooltip/Tooltip.vue'
 import Select from './components/Select/Select.vue'
 import FixedVList from './components/Virtual-List/FixedVList.vue'
+import Scale from './components/Scale/Scale.vue'
 import type { App } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -31,6 +32,7 @@ const components = [
   Tooltip,
   Select,
   FixedVList,
+  Scale,
 ]
 
 const install = (app: App) => {
@@ -52,6 +54,7 @@ export {
   Tooltip,
   Select,
   FixedVList,
+  Scale,
   createMessage,
   closeAll,
 }

@@ -61,6 +61,10 @@ export default defineConfig({
               text: 'Select',
               link: '/components/select',
             },
+            {
+              text: 'Scale',
+              link: '/components/scale',
+            },
           ],
         },
       ],
