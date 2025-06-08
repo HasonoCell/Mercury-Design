@@ -1,6 +1,6 @@
 # Mercury-Design
 
-2025 暑期蓝山工作室考核
+![](./public/Mercury-Design.png)
 
 ## 文档站点
 
